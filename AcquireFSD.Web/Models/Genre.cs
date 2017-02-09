@@ -9,6 +9,4 @@ namespace AcquireFSD.Web.Models
         [StringLength(255)]
         public string Name { get; set; }
     }
-
-
 }
