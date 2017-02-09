@@ -1,7 +1,6 @@
 ﻿using AcquireFSD.Web.Models;
 using AcquireFSD.Web.Models.ViewModels;
 using Microsoft.AspNet.Identity;
-using System;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -30,6 +29,8 @@ namespace AcquireFSD.Web.Controllers
         [HttpPost]
         public ActionResult Create(GigFormViewModel viewModel)
         {
+            if (ModelState.IsValid)
+                return View("Create", viewModel);
             var gig = new Gig()
             {
                 ArtistId = User.Identity.GetUserId(),
