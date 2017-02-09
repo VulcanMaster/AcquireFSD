@@ -190,6 +190,14 @@
     <Compile Include="Migrations\201702090853450_PopolateGenresTable.Designer.cs">
       <DependentUpon>201702090853450_PopolateGenresTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702091243114_AddForeignKeyPropertiesToGig.cs" />
+    <Compile Include="Migrations\201702091243114_AddForeignKeyPropertiesToGig.Designer.cs">
+      <DependentUpon>201702091243114_AddForeignKeyPropertiesToGig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702091304349_AddForeignKeyPropertiesToGigFix.cs" />
+    <Compile Include="Migrations\201702091304349_AddForeignKeyPropertiesToGigFix.Designer.cs">
+      <DependentUpon>201702091304349_AddForeignKeyPropertiesToGigFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -281,6 +289,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702090853450_PopolateGenresTable.resx">
       <DependentUpon>201702090853450_PopolateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702091243114_AddForeignKeyPropertiesToGig.resx">
+      <DependentUpon>201702091243114_AddForeignKeyPropertiesToGig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702091304349_AddForeignKeyPropertiesToGigFix.resx">
+      <DependentUpon>201702091304349_AddForeignKeyPropertiesToGigFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
