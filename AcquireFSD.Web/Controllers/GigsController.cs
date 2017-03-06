@@ -29,12 +29,15 @@ namespace AcquireFSD.Web.Controllers
         [HttpPost]
         public ActionResult Create(GigFormViewModel viewModel)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+            {
+                viewModel.Genres = _context.Genres.ToList();
                 return View("Create", viewModel);
+            }
             var gig = new Gig()
             {
                 ArtistId = User.Identity.GetUserId(),
-                DateTime = viewModel.DateTime,//DateTime.Parse(($"{viewModel.Date} {viewModel.Time}")),
+                DateTime = viewModel.GetDateTime(),//GetDateTime.Parse(($"{viewModel.Date} {viewModel.Time}")),
                 GenreId = viewModel.Genre,
                 Venue = viewModel.Venue
             };

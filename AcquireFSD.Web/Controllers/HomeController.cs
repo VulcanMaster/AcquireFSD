@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using AcquireFSD.Web.Test;
 using System.Web.Mvc;
 
 namespace AcquireFSD.Web.Controllers
@@ -15,6 +12,16 @@ namespace AcquireFSD.Web.Controllers
 
         public ActionResult About()
         {
+            var testClass = new ClassOne();
+
+            testClass.Greetings();
+
+            testClass.CallLogger();
+
+            testClass.Greetings();
+
+            testClass.CallLogger();
+
             ViewBag.Message = "Your application description page.";
 
             return View();
