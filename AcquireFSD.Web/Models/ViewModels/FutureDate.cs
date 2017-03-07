@@ -14,7 +14,8 @@ namespace AcquireFSD.Web.Models.ViewModels
                 CultureInfo.CurrentCulture,
                 DateTimeStyles.None, 
                 out dateTime);
-            return (isValid && dateTime > DateTime.Now);
+            return isValid;
+            //return (isValid && dateTime > DateTime.Now);
             //return base.IsValid(value); // was by default ootb
         }
     }

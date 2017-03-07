@@ -17,7 +17,8 @@ namespace AcquireFSD.Web.Models.ViewModels
         public string Time { get; set; }
         [Required]
         public byte Genre { get; set; }
-        [Required]
+
+        [AlwaysValid]
         public IEnumerable<Genre> Genres { get; set; }
 
         public DateTime GetDateTime()
