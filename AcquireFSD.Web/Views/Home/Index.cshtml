@@ -3,10 +3,31 @@
     ViewBag.Title = "Home Page";
 }
 
-<ul>
+<ul class="gigs">
     @foreach (var gig in Model)
     {
-        <li>@gig.DateTime - @gig.Artist.Name</li>        
+        <li>
+            @*(div.date>div.month+div.day)+(div.details>span.artist+span.genre)*@ @*Zen code example, just position at the end of line and hit the Tab*@
+
+            <div class="date">
+                <div class="month">
+                    @gig.DateTime.ToString("MMM")
+                </div>
+                <div class="day">
+                    @gig.DateTime.ToString("d ")
+                </div>
+            </div>
+            <div class="details">
+                <span class="artist">
+                    @gig.Artist.Name
+                </span>
+                <span class="genre">
+                    @gig.Genre.Name
+                </span>
+            </div>
+
+            @*@gig.DateTime - @gig.Artist.Name*@ @*example from the most first example*@
+        </li>
     }
 </ul>
 
