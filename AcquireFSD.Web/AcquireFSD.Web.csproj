@@ -274,6 +274,12 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="ShareStuff\JSOM\WebParts\AddWebPartToPage.js" />
+    <Content Include="ShareStuff\JSOM\WebParts\readme.txt" />
+    <Content Include="ShareStuff\JSOM\WebParts\SayMeHello.html" />
+    <Content Include="ShareStuff\SayMeHello\readme.txt" />
+    <Content Include="ShareStuff\SayMeHello\SayMeHello.html" />
+    <Content Include="ShareStuff\SayMeHello\saymehelloscript.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
