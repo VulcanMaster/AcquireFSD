@@ -243,3 +243,4 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/AcquireFSD.Web/ShareStuff/Temp

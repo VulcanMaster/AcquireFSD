@@ -254,12 +254,18 @@
     <Compile Include="Test\ClassTwo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\..\..\Temp\Tasks\20170323_Cramo\itemJSOM\TestObjectScopes03.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="HTML5\JavaScriptScopes\jQuery.html" />
+    <Content Include="HTML5\JavaScriptScopes\jsObjScopes01.js" />
+    <Content Include="HTML5\JavaScriptScopes\jsObjScopes.js" />
+    <Content Include="HTML5\JavaScriptTryCatch\htmlJSTryCatchTest.html" />
+    <Content Include="HTML5\JavaScriptTryCatch\jsTryCatchExperiments.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -280,6 +286,7 @@
     <Content Include="ShareStuff\SayMeHello\readme.txt" />
     <Content Include="ShareStuff\SayMeHello\SayMeHello.html" />
     <Content Include="ShareStuff\SayMeHello\saymehelloscript.js" />
+    <Content Include="ShareStuff\Temp\TempForObjerve.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
