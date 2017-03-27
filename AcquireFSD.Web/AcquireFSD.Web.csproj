@@ -255,6 +255,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\..\..\Temp\Tasks\20170323_Cramo\itemJSOM\TestObjectScopes03.js" />
+    <Content Include="Angular\SimpleFiled\HtmlPage.html" />
+    <Content Include="Angular\SimpleFiled\myApp.js" />
+    <Content Include="Angular\SimpleFiled\myCtrl.js" />
+    <Content Include="Angular\Simple\SimpleDirective.html" />
+    <Content Include="Angular\Simple\SimpleOne.html" />
+    <Content Include="Angular\Simple\SimpleTwo.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
