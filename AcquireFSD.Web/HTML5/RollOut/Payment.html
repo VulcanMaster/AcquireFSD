@@ -15,11 +15,21 @@
             color:red
         }*/
         /*input[type="text"]:required:invalid + label { color: red; }*/
-        #inputPULChk-error  {
+        #inputPULChk-error {
             margin-right: 15px;
         }
 
         #lblPULChkBeforeCheckBox {
+            display: none;
+        }
+
+        .container {
+            border-radius: 25px;
+            border: 2px solid #5bc0de;
+            padding: 20px;
+        }
+
+        #lblForRadio {
             display: none;
         }
     </style>
@@ -196,8 +206,8 @@
                                title="ÅÅÅÅMMDD-XXXX"
                                oninput="verifyValidity(inputPersonnummer)">
                         <!--<small class="help-block">
-                        Enligt formatet ÅÅÅÅMMDD-XXXX
-                    </small>-->
+                            Enligt formatet ÅÅÅÅMMDD-XXXX
+                        </small>-->
                     </div>
                 </div>
             </div> <!--row 05E-->
@@ -224,7 +234,36 @@
             </div> <!--row 07E-->
 
             <div class="row">
-                <!--row 08-->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <!--<div class="btn-group">-->
+                        <div id="lblForRadio">
+                            <label class="control-label">
+                                Select payment type!
+                            </label><br />
+                        </div>
+
+                        <input type="radio" name="radiochoice"
+                               value="card"
+                               pay-group="paymenttype"
+                               
+                               onchange="$('#lblForRadio').hide();">Jag vill betala mitt medlemskap nu via kort
+                        <br />
+
+                        <input type="radio" name="radiochoice"
+                               value="invoice"
+                               pay-group="paymenttype"
+                               
+                               onchange="$('#lblForRadio').hide();">Jag vill få ett inbetalningskort hemskickat
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+
+            <br />
+
+
+            <!--<div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                         <input name="inputBetalaNuViaKort" id="inputBetalaNuViaKort"
@@ -235,10 +274,9 @@
                         </label>
                     </div>
                 </div>
-            </div> <!--row 08E-->
+            </div>
 
             <div class="row">
-                <!--row 09-->
                 <div class="col-md-12">
                     <div class="form-group">
                         <input name="inputInbetalningskort" id="inputInbetalningskort"
@@ -249,7 +287,7 @@
                         </label>
                     </div>
                 </div>
-            </div> <!--row 09E-->
+            </div>-->
 
 
             <div class="row">
@@ -284,9 +322,11 @@
                 $("#inputPersonnummer").prop('disabled', false);
             } else {
                 $("#inputPersonnummer").prop('disabled', true);
-
+                $("#inputPersonnummer").parent().removeClass("has-error");
             }
         });
+
+
 
         $('#inputBetalaNuViaKort').change(function () {
             if ($(this).is(':not(:checked)')) {
@@ -332,33 +372,59 @@
             }
         }
 
-        function checkThePaymentType() {
+        // try for radiobutton
+        function paymentTypeSelected() {
             var noSelection = true;
-            $("input:checkbox[pay-group]").each(function (){
+            $("input:radio[pay-group]").each(function () {
                 if ($(this).is(":checked")) {
-                    noSelection  = false;
+                    noSelection = false;
                 }
                 if (!noSelection) return false;
-//                $(this).parent().removeClass("has-error");
-  //              var messageLabelId = "#" + this.id + "-error";
-//                $(messageLabelId).remove();
-                //$(this).parentElement.classList.addClass(" has-error");
             });
 
-            $("input:checkbox[pay-group]").each(function() {
-                if (noSelection) {
-                    //var label = $("label[for='" + $(this).attr('id') + "']");
-                    //label.addClass("has-error");
-                    $(this).parent().addClass("has-error");
-                }
-            });
-
+            if (noSelection) {
+                $("#lblForRadio").show();
+                $("#lblForRadio").addClass("has-error");
             }
+
+            return noSelection;
+
+
+            //$("input:radio[pay-group]").each(function () {
+            //    if (noSelection) {
+            //        $(this).parent().addClass("has-error");
+            //    }
+            //});
+        }
+
+
+
+        // good for checkboxes
+        //function checkThePaymentType() {
+        //    var noSelection = true;
+        //    $("input:checkbox[pay-group]").each(function () {
+        //        if ($(this).is(":checked")) {
+        //            noSelection = false;
+        //        }
+        //        if (!noSelection) return false;
+        //    });
+
+        //    $("input:checkbox[pay-group]").each(function () {
+        //        if (noSelection) {
+        //            $(this).parent().addClass("has-error");
+        //        }
+        //    });
+        //}
+
 
         function markRequired() {
             var btnList = $("input");
             btnList.each(function (i) {
                 console.log(this.id);
+                console.log(this.name);
+                if (this.name === "radiochoice") {
+                    debugger;
+                }
 
                 //ToDo ["0"].validity.patternMismatch
                 // check this out
@@ -368,14 +434,17 @@
                 }
             });
 
-            checkThePaymentType();
-            checkThePUL();
+            if (paymentTypeSelected()) {
+                checkThePUL();
+            } else {
+                return false;
+            }
         }
 
         function verifyValidity(element) {
             console.log($(element).id);
             if ($(element).valid() && ($(element).attr("pattern") === null)) {
-                //if 
+                //if
                 //["0"].validity.patternMismatch
                 element.parentElement.classList.remove("has-error");
             } else {
@@ -395,6 +464,11 @@
             //alert("Gutten Morgen");
             markRequired();
             //markInvalidInputs();
+            setTimeout(function () {
+                $("#radiochoice-error").hide();
+            }, 100);
+
+
         });
     </script>
 </body>
