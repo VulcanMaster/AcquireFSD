@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <title>Payment Form (POC)</title>
+    <meta charset="utf-8" />
+    <style>
+        .requireAsterisk {
+            color: red;
+        }
+        /*.error + label {
+            color:red
+        }*/
+        /*input[type="text"]:required:invalid + label { color: red; }*/
+    </style>
+
+    <script>
+        // Wait for the DOM to be ready
+        $(function () {
+            // Initialize form validation on the registration form.
+            // It has the name attribute "registration"
+            $("form[name='paymentForm']").validate({
+                // Specify validation rules
+                rules: {
+                    // The key name on the left side is the name attribute
+                    // of an input field. Validation rules are defined
+                    // on the right side
+                    firstname: "required",
+                    lastname: "required",
+                    inputFornamn: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        // Specify that email should be validated
+                        // by the built-in "email" rule
+                        email: true
+                    },
+                    password: {
+                        required: true,
+                        minlength: 5
+                    }
+                },
+                // Specify validation error messages
+                messages: {
+                    firstname: "Please enter your firstname",
+                    lastname: "Please enter your lastname",
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long"
+                    },
+                    email: "Please enter a valid email address"
+                },
+                // Make sure the form is submitted to the destination defined
+                // in the "action" attribute of the form when valid
+                submitHandler: function (form) {
+                    form.submit();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h3 align="center">Payment Form (POC)</h3><br />
+
+        <form name="paymentForm" id="paymentForm" role="form">
+            <div class="row">
+                <!--row 01-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputFornamn" class="control-label">
+                            Förnamn <span class="requireAsterisk">*</span>
+                        </label>
+                        <input name="inputFornamn" id="inputFornamn" type="text" autofocus=""
+                               class="form-control"
+                               placeholder="Förnamn"
+                               oninput="verifyValidity(inputFornamn)">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputEfternamn" class="control-label">
+                            Efternamn <span class="requireAsterisk">*</span>
+                        </label>
+                        <input name="inputEfternamn" id="inputEfternamn" type="text"
+                               class="form-control"
+                               placeholder="Efternamn"
+                               required
+                               oninput="verifyValidity(inputEfternamn)">
+
+                    </div>
+                </div>
+            </div> <!--row 01E-->
+
+            <div class="row">
+                <!--row 02-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputGatuadress" class="control-label">
+                            Gatuadress
+                        </label>
+                        <input name="inputGatuadress" id="inputGatuadress" type="text" class="form-control"
+                               placeholder="Gatuadress">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputPostnummer" class="control-label">
+                            Postnummer <span class="requireAsterisk">*</span>
+                        </label>
+                        <input name="inputPostnummer" id="inputPostnummer" type="text" class="form-control"
+                               placeholder="12345"
+                               maxlength="5"
+                               pattern="[0-9].{4,}"
+                               required
+                               title="Only digits"
+                               oninput="verifyValidity(inputPostnummer)">
+                    </div>
+                </div>
+            </div> <!--row 02E-->
+
+
+            <div class="row">
+                <!--row 03-->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="inputOrt" class="control-label">
+                            Ort
+                        </label>
+                        <input name="inputOrt" id="inputOrt" type="text" class="form-control" placeholder="Ort">
+                    </div>
+                </div>
+            </div> <!--row 03E -->
+
+            <div class="row">
+                <!--row 04-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputEpost" class="control-label">
+                            Epost
+                        </label>
+                        <input name="inputEpost" id="inputEpost" type="email" class="form-control" placeholder="myemail@email.se">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputMobil" class="control-label">
+                            Mobil <span class="requireAsterisk">*</span>
+                        </label>
+                        <input name="inputMobil" id="inputMobil" type="text" class="form-control"
+                               placeholder="Mobil(+467XXXXXXXX)"
+                               maxlength="12"
+                               required
+                               pattern="^([+]46)\s*(7[0236])\s*(\d{4})\s*(\d{3})$"
+                               title="+467XXXXXXXX"
+                               oninput="verifyValidity(inputMobil)">
+                    </div>
+                </div>
+            </div> <!--row 04E-->
+
+
+            <div class="row">
+                <!--row 05-->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="inputPersonnummer" class="control-label">
+                            Personnummer<span class="requireAsterisk"> *</span>
+                        </label>
+                        <input name="inputPersonnummer" id="inputPersonnummer" type="text"
+                               class="form-control"
+                               placeholder="ÅÅÅÅMMDD-XXXX"
+                               maxlength="13"
+                               required
+                               pattern="[0-9]{4}[0-9]{2}[0-9]{2}[-+][0-9]{4}"
+                               title="ÅÅÅÅMMDD-XXXX"
+                               oninput="verifyValidity(inputPersonnummer)">
+                        <!--<small class="help-block">
+                            Enligt formatet ÅÅÅÅMMDD-XXXX
+                        </small>-->
+                    </div>
+                </div>
+            </div> <!--row 05E-->
+
+            <div class="row">
+                <!--row 06-->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input name="inputSaknarPersonnummer" id="inputSaknarPersonnummer" type="checkbox" placeholder="">
+                        <label for="inputSaknarPersonnummer" class="control-label">
+                            Saknar Personnummer
+                        </label>
+                    </div>
+                </div>
+            </div> <!--row 06E-->
+
+            <div class="row">
+                <!--row 07-->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <h3 style="border-bottom: 3px double;">Betalningsinformation</h3>
+                    </div>
+                </div>
+            </div> <!--row 07E-->
+
+            <div class="row">
+                <!--row 08-->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input name="inputBetalaNuViaKort" id="inputBetalaNuViaKort"
+                               pay-group="paymenttype"
+                               type="checkbox"
+                               >
+                        <label for="inputBetalaNuViaKort" class="control-label">
+                            Jag vill betala mitt medlemskap nu via kort
+                        </label>
+                    </div>
+                </div>
+            </div> <!--row 08E-->
+
+            <div class="row">
+                <!--row 09-->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input name="inputInbetalningskort" id="inputInbetalningskort"
+                               pay-group="paymenttype"
+                               type="checkbox"
+                               >
+                        <label for="inputInbetalningskort" class="control-label">
+                            Jag vill få ett inbetalningskort hemskickat
+                        </label>
+                    </div>
+                </div>
+            </div> <!--row 09E-->
+
+
+            <div class="row">
+                <!--row 11-->
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="control-label">PUL <span class="requireAsterisk"> *</span></label><br />
+                        <input name="inputPULChk" id="inputPULChk"
+                               type="checkbox"
+                               required
+                               title="Please approve">
+                        <label for="inputPULChk" class="control-label">
+                            Jag godkänner att personuppgifterna lagras enligt PUL
+                        </label>
+                    </div>
+                </div>
+            </div> <!--row 11E-->
+            <!--button 01-->
+            <button type="submit" class="btn btn-default pull-right">
+                Bli medlem
+            </button>
+        </form>
+    </div>
+    <script type="text/javascript">
+        $('#inputSaknarPersonnummer').change(function () {
+            if ($(this).is(':not(:checked)')) {
+                $("#inputPersonnummer").prop('disabled', false);
+            } else {
+                $("#inputPersonnummer").prop('disabled', true);
+
+            }
+        });
+
+        $('#inputBetalaNuViaKort').change(function () {
+            if ($(this).is(':not(:checked)')) {
+                $("#inputInbetalningskort").prop('disabled', false);
+            } else {
+                removeNotificationFromPaymentCheckBoxes();
+                //                $(this).parent().removeClass("has-error");
+                $("#inputInbetalningskort").prop('disabled', true);
+
+            }
+        });
+
+        $('#inputInbetalningskort').change(function () {
+            if ($(this).is(':not(:checked)')) {
+                $("#inputBetalaNuViaKort").prop('disabled', false);
+            } else {
+                //                $(this).parent().removeClass("has-error");
+                $("#inputBetalaNuViaKort").prop('disabled', true);
+                removeNotificationFromPaymentCheckBoxes();
+
+            }
+        });
+
+        function removeNotificationFromPaymentCheckBoxes() {
+
+
+            $("input:checkbox[pay-group]").each(function () {
+                console.log(this.id);
+
+                //ToDo ["0"].validity.patternMismatch
+                // check this out
+                $(this).parent().removeClass("has-error");
+                var messageLabelId = "#" + this.id + "-error";
+                $(messageLabelId).remove();
+                //$(this).parentElement.classList.addClass(" has-error");
+            });
+
+        }
+
+        function checkThePaymentType() {
+            var noSelection = true;
+            $("input:checkbox[pay-group]").each(function (){
+                if ($(this).is(":checked")) {
+                    noSelection  = false;
+                }
+                if (!noSelection) return false;
+//                $(this).parent().removeClass("has-error");
+  //              var messageLabelId = "#" + this.id + "-error";
+//                $(messageLabelId).remove();
+                //$(this).parentElement.classList.addClass(" has-error");
+            });
+
+            $("input:checkbox[pay-group]").each(function() {
+                if (noSelection) {
+                    //var label = $("label[for='" + $(this).attr('id') + "']");
+                    //label.addClass("has-error");
+                    $(this).parent().addClass("has-error");
+                }
+            });
+
+            }
+
+        function markRequired() {
+            var btnList = $("input");
+            btnList.each(function (i) {
+                console.log(this.id);
+
+                //ToDo ["0"].validity.patternMismatch
+                // check this out
+                if (!$(this).valid()) {
+                    $(this).parent().addClass("has-error");
+                    //$(this).parentElement.classList.addClass(" has-error");
+                }
+            });
+
+            checkThePaymentType();
+        }
+
+        function verifyValidity(element) {
+            console.log($(element).id);
+            if ($(element).valid() && ($(element).attr("pattern") === null)) {
+                //if 
+                //["0"].validity.patternMismatch
+                element.parentElement.classList.remove("has-error");
+            } else {
+                if (!$(element)["0"].validity.patternMismatch) {
+                    element.parentElement.classList.remove("has-error");
+                } else {
+                    //if element.parentElement.clasList.add("has-error");
+                    if (!element.parentElement.classList.contains("has-error"))
+                        element.parentElement.classList.add("has-error")
+                }
+            }
+        }
+
+        $("#paymentForm").submit(function (event) {
+            //if (false) return;
+            event.preventDefault();
+            //alert("Gutten Morgen");
+            markRequired();
+            //markInvalidInputs();
+        });
+    </script>
+</body>
+</html>

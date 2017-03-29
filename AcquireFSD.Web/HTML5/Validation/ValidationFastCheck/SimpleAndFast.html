@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <title>Payment Form (POC)</title>
+    <meta charset="utf-8" />
+    <script>
+
+        //$(document).ready(function () {
+
+        //    $('#paymentForm').validate({ // initialize the plugin
+        //        rules: {
+        //            inputFornamn: {
+        //                required: true
+        //            }
+        //        },
+        //        messages: {
+        //            inputFornamn : function (e){alert("Wow mama mia!")}
+        //        }
+        //    });
+
+        //});
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var elements = document.getElementsByTagName("INPUT");
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].oninvalid = function (e) {
+                    e.target.setCustomValidity("");
+                    if (!e.target.validity.valid) {
+                        e.target.parentElement.classList = e.target.parentElement.classList + " has-error has-danger";
+                        //e.target.classList.add("has-error has-danger");
+                        e.target.setCustomValidity("This field cannot be left blank");
+                    }
+
+                };
+                elements[i].oninput = function (e) {
+                    e.target.setCustomValidity("");
+                };
+            }
+        })
+
+    </script>
+
+    <style>
+        .requireAsterisk {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 align="center">Payment Form (POC)</h3><br />
+        <form name="paymentForm" id="paymentForm" role="form">
+            <div class="row">
+                <!--row 01-->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputFornamn" class="control-label">
+                            Förnamn <span class="requireAsterisk">*</span>
+                        </label>
+                        <input name="inputFornamn" id="inputFornamn" type="text" autofocus="" class="form-control"
+                               placeholder="Förnamn" required>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputEfternamn" class="control-label">
+                            Efternamn <span class="requireAsterisk">*</span>
+                        </label>
+                        <input name="inputEfternamn" id="inputEfternamn" type="text" class="form-control"
+                               placeholder="Efternamn" required="">
+
+                    </div>
+                </div>
+            </div> <!--row 01E-->
+            <!--button 01-->
+            <button type="submit" class="btn btn-default pull-right">
+                Bli medlem
+            </button>
+        </form>
+    </div>
+</body>
+</html>

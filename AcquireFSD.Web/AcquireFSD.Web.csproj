@@ -255,6 +255,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\..\..\Temp\Tasks\20170323_Cramo\itemJSOM\TestObjectScopes03.js" />
+    <Content Include="Angular\FormRelated\app\testAngJS.html" />
+    <Content Include="Angular\FormRelated\app\theApp.js" />
+    <Content Include="Angular\FormRelated\app\theCtrl.js" />
+    <Content Include="Angular\HtmlPage1.html" />
     <Content Include="Angular\SimpleFiled\HtmlPage.html" />
     <Content Include="Angular\SimpleFiled\myApp.js" />
     <Content Include="Angular\SimpleFiled\myCtrl.js" />
@@ -272,6 +276,11 @@
     <Content Include="HTML5\JavaScriptScopes\jsObjScopes.js" />
     <Content Include="HTML5\JavaScriptTryCatch\htmlJSTryCatchTest.html" />
     <Content Include="HTML5\JavaScriptTryCatch\jsTryCatchExperiments.js" />
+    <Content Include="HTML5\jQueryPaymentForm.html" />
+    <Content Include="HTML5\jQueryRequestForm\jQueryPaymentForm.html" />
+    <Content Include="HTML5\RollOut\Payment.html" />
+    <Content Include="HTML5\Validation\ValidationFastCheck\SimpleAndFast.html" />
+    <Content Include="HTML5\Validation\ValidationExample.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
