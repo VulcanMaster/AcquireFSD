@@ -15,6 +15,13 @@
             color:red
         }*/
         /*input[type="text"]:required:invalid + label { color: red; }*/
+        #inputPULChk-error  {
+            margin-right: 15px;
+        }
+
+        #lblPULChkBeforeCheckBox {
+            display: none;
+        }
     </style>
 
     <script>
@@ -65,7 +72,7 @@
 </head>
 <body>
     <div class="container">
-        <h3 align="center">Payment Form (POC)</h3><br />
+        <h3 align="center">Bli medlem (POC)</h3><br />
 
         <form name="paymentForm" id="paymentForm" role="form">
             <div class="row">
@@ -182,8 +189,8 @@
                                title="ÅÅÅÅMMDD-XXXX"
                                oninput="verifyValidity(inputPersonnummer)">
                         <!--<small class="help-block">
-                            Enligt formatet ÅÅÅÅMMDD-XXXX
-                        </small>-->
+                        Enligt formatet ÅÅÅÅMMDD-XXXX
+                    </small>-->
                     </div>
                 </div>
             </div> <!--row 05E-->
@@ -215,8 +222,7 @@
                     <div class="form-group">
                         <input name="inputBetalaNuViaKort" id="inputBetalaNuViaKort"
                                pay-group="paymenttype"
-                               type="checkbox"
-                               >
+                               type="checkbox">
                         <label for="inputBetalaNuViaKort" class="control-label">
                             Jag vill betala mitt medlemskap nu via kort
                         </label>
@@ -230,8 +236,7 @@
                     <div class="form-group">
                         <input name="inputInbetalningskort" id="inputInbetalningskort"
                                pay-group="paymenttype"
-                               type="checkbox"
-                               >
+                               type="checkbox">
                         <label for="inputInbetalningskort" class="control-label">
                             Jag vill få ett inbetalningskort hemskickat
                         </label>
@@ -245,11 +250,16 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label class="control-label">PUL <span class="requireAsterisk"> *</span></label><br />
+                        <div id="lblPULChkBeforeCheckBox">
+                            <label for="inputPULChk" class="control-label">
+                                Jag godkänner att personuppgifterna lagras enligt PUL
+                            </label><br />
+                        </div>
                         <input name="inputPULChk" id="inputPULChk"
                                type="checkbox"
                                required
-                               title="Please approve">
-                        <label for="inputPULChk" class="control-label">
+                               title="Vänligen godkänn">
+                        <label for="inputPULChk" class="control-label" id="lblPULChkAfterCheckBox">
                             Jag godkänner att personuppgifterna lagras enligt PUL
                         </label>
                     </div>
@@ -289,7 +299,6 @@
                 //                $(this).parent().removeClass("has-error");
                 $("#inputBetalaNuViaKort").prop('disabled', true);
                 removeNotificationFromPaymentCheckBoxes();
-
             }
         });
 
@@ -307,6 +316,13 @@
                 //$(this).parentElement.classList.addClass(" has-error");
             });
 
+        }
+
+        function checkThePUL() {
+            if ($("#inputPULChk").is(":not(:checked)")) {
+                $("#lblPULChkBeforeCheckBox").show();
+                $("#lblPULChkAfterCheckBox").hide();
+            }
         }
 
         function checkThePaymentType() {
@@ -346,6 +362,7 @@
             });
 
             checkThePaymentType();
+            checkThePUL();
         }
 
         function verifyValidity(element) {
@@ -360,7 +377,7 @@
                 } else {
                     //if element.parentElement.clasList.add("has-error");
                     if (!element.parentElement.classList.contains("has-error"))
-                        element.parentElement.classList.add("has-error")
+                        element.parentElement.classList.add("has-error");
                 }
             }
         }
