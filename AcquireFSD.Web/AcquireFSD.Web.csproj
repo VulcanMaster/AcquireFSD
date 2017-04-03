@@ -279,6 +279,7 @@
     <Content Include="HTML5\jQueryPaymentForm.html" />
     <Content Include="HTML5\jQueryRequestForm\jQueryPaymentForm.html" />
     <Content Include="HTML5\RollOut\Payment.html" />
+    <Content Include="HTML5\RollOut\style.css" />
     <Content Include="HTML5\Validation\ValidationFastCheck\SimpleAndFast.html" />
     <Content Include="HTML5\Validation\ValidationExample.html" />
     <Content Include="Scripts\bootstrap.js" />

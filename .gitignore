@@ -244,3 +244,5 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 /AcquireFSD.Web/ShareStuff/Temp
+/AcquireFSD.Web/HTML5/RollOut/History from
+/AcquireFSD.Web/HTML5/RollOut/style.css

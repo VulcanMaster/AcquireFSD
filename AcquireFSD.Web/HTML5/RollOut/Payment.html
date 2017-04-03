@@ -5,6 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <link href="style.css" rel="stylesheet" />
     <title>Payment Form (POC)</title>
     <meta charset="utf-8" />
     <style>
@@ -32,13 +33,8 @@
     </style>
 </head>
 <body>
-    <div class="jumbotron">
-        <h3 align="center">Bli medlem (POC)</h3><br />
-    </div>
 
     <div class="container">
-
-
         <form name="paymentForm" id="paymentForm" role="form">
             <div class="row">
                 <div class="col-md-6">
@@ -237,7 +233,6 @@
 
         function removeNotificationFromPaymentCheckBoxes() {
             $("input:checkbox[pay-group]").each(function () {
-                console.log(this.id);
                 $(this).parent().removeClass("has-error");
                 var messageLabelId = "#" + this.id + "-error";
                 $(messageLabelId).remove();
@@ -271,8 +266,6 @@
         function markRequired() {
             var btnList = $("input");
             btnList.each(function (i) {
-                console.log(this.id);
-                console.log(this.name);
                 if (this.name === "radiochoice") {
                     debugger;
                 }
@@ -290,7 +283,6 @@
         }
 
         function verifyValidity(element) {
-            console.log($(element).id);
             if ($(element).valid() && ($(element).attr("pattern") === null)) {
                 element.parentElement.classList.remove("has-error");
             } else {
@@ -307,6 +299,35 @@
             event.preventDefault();
             markRequired();
         });
+
+        function callService() {
+            var myData = $("#paymentForm").serialize();
+
+            var requestUrl = "http://localhost:16064/api/ComminicationApi";
+
+            $.ajax({
+                type: 'POST',
+                url: requestUrl,
+                data: myData,
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                headers: {
+                    Accept: "application/json;odata=verbose"
+                },
+                dataType: 'json',
+                beforeSend: function () {
+                },
+                success: function (data) {
+                    alert("Success!");
+//                    window.location.reload();
+                },
+                error: function (xhr) {
+                    console.log(xhr);
+                    alert('Error, response status:' + xhr.status);
+                    alert("Error" + xhr.responseText);
+                    window.location.reload();
+                }
+            });
+        }
     </script>
 </body>
 </html>
