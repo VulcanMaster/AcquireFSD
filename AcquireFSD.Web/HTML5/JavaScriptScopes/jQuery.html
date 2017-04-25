@@ -2,13 +2,43 @@
 <html>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="../JavaScriptScopes/jsObjScopes01.js"></script>
+<!--    <script src="../JavaScriptScopes/jsObjScopes01.js"></script>-->
     <script>
-$(document).ready(function(){
-    $("button").click(function(){
-        $("p").hide();
-    });
-});
+
+        function waitForJQueryAndRun() {
+            if (window.jQuery) {
+                // jQuery is loaded  
+                alert("Yeah!");
+
+                $(function () {
+                    console.log("Yaba daba doo!");
+                    $(document).ready(function () {
+                        $("button").click(function () {
+                            $("p").hide();
+                        });
+                    });
+                });
+
+            } else {
+                // jQuery is not loaded
+                setTimeout(66, waitForJQueryAndRun());
+            }
+        }
+
+
+        window.onload = function () {
+            waitForJQueryAndRun();
+        }
+
+        
+
+
+    
+//$(document).ready(function(){
+//    $("button").click(function(){
+//        $("p").hide();
+//    });
+//});
     </script>
 </head>
 <body>

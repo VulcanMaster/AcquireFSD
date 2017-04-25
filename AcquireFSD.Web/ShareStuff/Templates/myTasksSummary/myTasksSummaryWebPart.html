@@ -1,0 +1,49 @@
+﻿<div id="controlCounterImageTasks">
+    <div id="controlCounterFigureTasks" class="controlCounterFigure">
+        0
+    </div>
+</div>
+
+<div id="myTaskListTable" style="display:block; display:none">
+    <table style="border-collapse: separate; border-spacing: 0 10px;">
+        <thead>
+            <tr>
+                <th style="width:5%;">Status</th>
+                <th style="width:70%; text-align: left; padding-left: 20px;">Titel</th>
+                <th style="width:25%"><select style="border:none"><option value="alle">Wichtigste zuerst</option></select></th>
+            </tr>
+        </thead>
+        <tbody id="myTaskSummaryTableTBody"></tbody>
+    </table>
+
+    <div id="myTaskListDialogTitle" style="visibility:hidden">
+        <div style="display:inline">
+            <img src="../_catalogs/masterpage/myDashboard/Pictures/myTasksDialogIcon.png" />
+        </div>
+        <div style="display:inline; vertical-align:super; font-size:1.5em;">
+            Meine Aufgaben
+        </div>
+    </div>
+
+</div>
+
+<style>
+    #controlCounterImageTasks {
+        background-image: url('../_catalogs/masterpage/myDashboard/Pictures/myTasks.png');
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 103px;
+        width: 102px;
+        cursor: pointer;
+    }
+
+    #controlCounterFigureTasks {
+        padding-right: 5px;
+        padding-bottom: 2px;
+        font-size: 1.5em;
+        color: white;
+    }
+</style>
+<script type="text/javascript" src="../_catalogs/masterpage/myDashboard/myTasksSummaryWebPart.js">
+
