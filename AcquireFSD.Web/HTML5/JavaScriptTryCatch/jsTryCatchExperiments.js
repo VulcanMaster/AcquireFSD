@@ -15,6 +15,7 @@ function expFunct01() {
 }
 
 function expFunct02() {
+    debugger;
     console.log("Hello from expFunct02");
 
     var x = y / z; // exception occures
