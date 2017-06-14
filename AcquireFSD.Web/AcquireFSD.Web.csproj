@@ -292,7 +292,6 @@
     <Content Include="HTML5\Experiments\DropDownTest.html" />
     <Content Include="HTML5\Experiments\HtmlPage1.html" />
     <Content Include="HTML5\Experiments\ProjectInformationAndProjectPermissions.html" />
-    <Content Include="HTML5\HtmlPage1.html" />
     <Content Include="HTML5\JavaScriptScopes\jQuery.html" />
     <Content Include="HTML5\JavaScriptScopes\jsObjScopes01.js" />
     <Content Include="HTML5\JavaScriptScopes\jsObjScopes.js" />

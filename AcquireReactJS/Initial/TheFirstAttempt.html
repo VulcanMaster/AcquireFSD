@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ReactJS very beginning.</title>
+    <meta charset="utf-8" />
+    <script src="https://fb.me/react-0.13.3.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+
+    <script type="text/jsx">
+        var NameDisplay = React.createClass({
+            render: function() {
+                return (
+                    <div>
+                        my Name is Nobody,Welcome to ReactJS first example.
+                    </div>
+                );
+            }
+        });
+
+        React.render(
+            <NameDisplay />,
+            document.getElementById('myName')
+        );
+    </script>
+</head>
+<body>
+    <div id="myName"></div>
+
+</body>
+</html>
