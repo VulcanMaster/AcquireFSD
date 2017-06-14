@@ -1,0 +1,10 @@
+﻿                  <script type="text/javascript" src="../Style%20Library/hello1.js"></script> 
+                  <script type="text/javascript" src="../Style%20Library/hello2.js"></script> 
+ 
+                  <script type="text/javascript"> 
+                    // Set language for script webparts that loads external html/js scripts. 
+                    // 0 = English ( default if not arLanguage is not set ) 
+                    // 1 = Norwegian 
+                    // 2 = Swedish 
+                    var Language = 0; 
+                  </script>
