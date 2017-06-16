@@ -215,6 +215,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CommentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -274,10 +275,23 @@
     <Content Include="Views\Home\TestExample.cshtml" />
     <Content Include="Views\Home\SimpleReactJSExample.cshtml" />
     <Content Include="Scripts\simpleComponent.jsx" />
+    <Content Include="Views\Home\ExampleOne.cshtml" />
+    <Content Include="Scripts\Tutorial.jsx" />
+    <Content Include="Scripts\TutorialTwo.jsx" />
+    <Content Include="Views\Home\TutorialTwo.cshtml" />
+    <Content Include="Views\Home\TutorialThree.cshtml" />
+    <Content Include="Scripts\TutorialThree.jsx" />
+    <Content Include="Views\Home\TutorialFour.cshtml" />
+    <Content Include="Scripts\TutorialFour.jsx" />
+    <Content Include="Scripts\TutorialFive.jsx" />
+    <Content Include="Views\Home\TutorialFive.cshtml" />
+    <Content Include="Views\Home\TutorialSix.cshtml" />
+    <Content Include="Scripts\TutorialSix.jsx" />
+    <Content Include="Scripts\TutorialSeven.jsx" />
+    <Content Include="Views\Home\TutorialSeven.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

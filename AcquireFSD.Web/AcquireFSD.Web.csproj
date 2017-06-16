@@ -288,10 +288,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="HTML5\Experiments\DropDown01.html" />
-    <Content Include="HTML5\Experiments\DropDownTest.html" />
-    <Content Include="HTML5\Experiments\HtmlPage1.html" />
-    <Content Include="HTML5\Experiments\ProjectInformationAndProjectPermissions.html" />
     <Content Include="HTML5\JavaScriptScopes\jQuery.html" />
     <Content Include="HTML5\JavaScriptScopes\jsObjScopes01.js" />
     <Content Include="HTML5\JavaScriptScopes\jsObjScopes.js" />
@@ -392,8 +388,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="HTML5\CallBack\" />
-    <Folder Include="HTML5\Deferrer\" />
     <Folder Include="HTML5\XML\" />
     <Folder Include="Views\Language\" />
   </ItemGroup>
