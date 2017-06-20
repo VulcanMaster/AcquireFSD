@@ -78,38 +78,37 @@ var Comment = React.createClass({
 });
 
 var CommentBox = React.createClass({
-  loadCommentsFromServer: function() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('get', this.props.url, true);
-    xhr.onload = function () {
-        debugger 
-      var data = JSON.parse(xhr.responseText);
-      this.setState({ data: data });
-    }.bind(this);
-    xhr.send();
-  },
+    loadCommentsFromServer: function() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', this.props.url, true);
+        xhr.onload = function() {
+            var data = JSON.parse(xhr.responseText);
+            this.setState({ data: data });
+        }.bind(this);
+        xhr.send();
+    },
 
-  getInitialState: function() {
-    return {data: []};
-  },
+    getInitialState: function() {
+        return {data: []};
+    },
 
-  componentDidMount: function() {
-    this.loadCommentsFromServer();
-    window.setInterval(this.loadCommentsFromServer, this.props.pollInterval);
-  },
+    componentDidMount: function() {
+        this.loadCommentsFromServer();
+        window.setInterval(this.loadCommentsFromServer, this.props.pollInterval);
+    },
 
-  render: function() {
-    return (
-      <div className="commentBox">
-        <h1>Comments</h1>
-        <CommentList data={this.state.data} />
-        <CommentForm />
-      </div>
-    );
-  }
+    render: function() {
+        return (
+          <div className="commentBox">
+            <h1>Comments</h1>
+            <CommentList data={this.state.data} />
+            <CommentForm />
+          </div>
+      );
+    }
 });
 
 ReactDOM.render(
-  <CommentBox url="/givemecomments" pollInterval={20000} />,
+  <CommentBox url="/givemecomments" pollInterval={200000} />,
   document.getElementById('content')
 );

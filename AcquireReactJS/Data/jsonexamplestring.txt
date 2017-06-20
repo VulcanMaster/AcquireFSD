@@ -1,0 +1,97 @@
+[
+        {
+            "id": "ATqebSP31iFDqAE6UhKuUIgXxiE5PF7FRppXzk-7eH_Z2qHlD77yG02yy-SfQsJChdOJZKzAMLNDkb-UJmozCt1iIVI89Rz8RKLlHTjyxTJsAg",
+            "weight": 28132.668508503983,
+            "resourceVisualization": {
+                "title": "Document",
+                "type": "Word",
+                "mediaType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "previewImageUrl": "https://cie493742.sharepoint.com/_api/v2.0/drives/b!Op5tI_fWIUOoATpSEq5QiBfGITk8XsVGmlfOT7t4f9naoeUPvvIbTbLL5J9CwkKF/items/01UAKX3QWTRFSKZQBQWNBZDP4UEZVDGCW5/thumbnails/0/small/thumbnailContent",
+                "previewText": "",
+                "containerWebUrl": "https://cie493742.sharepoint.com/sites/AdminInfo/Shared Documents/Forms/AllItems.aspx",
+                "containerDisplayName": "AdminInfo",
+                "containerType": "Site"
+            },
+            "resourceReference": {
+                "webUrl": "https://cie493742.sharepoint.com/sites/AdminInfo/Shared%20Documents/Document.docx?web=1",
+                "id": "drives/b!Op5tI_fWIUOoATpSEq5QiBfGITk8XsVGmlfOT7t4f9naoeUPvvIbTbLL5J9CwkKF/items/01UAKX3QWTRFSKZQBQWNBZDP4UEZVDGCW5",
+                "type": "microsoft.graph.driveItem"
+            }
+        },
+        {
+            "id": "ARGafSGgTGBBkZdSbf2Hjbyd1lmy3Na-RrFVIz_8Y_QRJl8ApUdEMUKgFnpX_d1a_HDUd10dqR5CjmNYthLb_eJ0Hx_3H79rTrJmx3fqduLHAA",
+            "weight": 27174.235737865212,
+            "resourceVisualization": {
+                "title": "hello world",
+                "type": "Word",
+                "mediaType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "previewImageUrl": "https://cie493742-my.sharepoint.com/_api/v2.0/drives/b!EZp9IaBMYEGRl1Jt_YeNvJ3WWbLc1r5GsVUjP_xj9BEmXwClR0QxQqAWelf93Vr8/items/013TBE3F3Q2R3V2HNJDZBI4Y2YWYJNX7PC/thumbnails/0/small/thumbnailContent",
+                "previewText": "Hello world!",
+                "containerWebUrl": "https://cie493742-my.sharepoint.com/personal/admin_cie493742_onmicrosoft_com/Documents/Forms/All.aspx",
+                "containerDisplayName": "CIE Administrator",
+                "containerType": "OneDriveBusiness"
+            },
+            "resourceReference": {
+                "webUrl": "https://cie493742-my.sharepoint.com/personal/admin_cie493742_onmicrosoft_com/Documents/hello%20world.docx?web=1",
+                "id": "drives/b!EZp9IaBMYEGRl1Jt_YeNvJ3WWbLc1r5GsVUjP_xj9BEmXwClR0QxQqAWelf93Vr8/items/013TBE3F3Q2R3V2HNJDZBI4Y2YWYJNX7PC",
+                "type": "microsoft.graph.driveItem"
+            }
+        },
+        {
+            "id": "AadS80o7pdlDsKPaNys5LqDzkMRSVDO5QKPJ_vsIy1yIULTvpLtthEidTXZWBbhKOqG0GT21mSlJucP3T0EXRAo-HrQCuYaJQqqy4ecc1gepAg",
+            "weight": 1.8392836295542236,
+            "resourceVisualization": {
+                "title": "Agartha City Commuter Proposal Presentation",
+                "type": "PowerPoint",
+                "mediaType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                "previewImageUrl": "https://cie493742.sharepoint.com/_api/v2.0/drives/b!p1LzSjul2UOwo9o3KzkuoPOQxFJUM7lAo8n--wjLXIhQtO-ku22ESJ1NdlYFuEo6/items/01ZOSRDA5BWQMT3NMZFFE3TQ7XJ5ARORAK/thumbnails/0/small/thumbnailContent",
+                "previewText": "Responsibilities and Tasks\r\nStaff\r\nTask\r\nResponsibility",
+                "containerWebUrl": "https://cie493742.sharepoint.com/sites/m400rfp/Shared Documents/Forms/AllItems.aspx",
+                "containerDisplayName": "M400 RFP",
+                "containerType": "Site"
+            },
+            "resourceReference": {
+                "webUrl": "https://cie493742.sharepoint.com/sites/m400rfp/Shared%20Documents/Detail%20Responsibilities.pptx?web=1",
+                "id": "drives/b!p1LzSjul2UOwo9o3KzkuoPOQxFJUM7lAo8n--wjLXIhQtO-ku22ESJ1NdlYFuEo6/items/01ZOSRDA5BWQMT3NMZFFE3TQ7XJ5ARORAK",
+                "type": "microsoft.graph.driveItem"
+            }
+        },
+        {
+            "id": "AadS80o7pdlDsKPaNys5LqDzkMRSVDO5QKPJ_vsIy1yIULTvpLtthEidTXZWBbhKOhRloyVGBO5GkwaIrKiqmI8-HrQCuYaJQqqy4ecc1gepAg",
+            "weight": 1.838829209503523,
+            "resourceVisualization": {
+                "title": "RFP",
+                "type": "Word",
+                "mediaType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "previewImageUrl": "https://cie493742.sharepoint.com/_api/v2.0/drives/b!p1LzSjul2UOwo9o3KzkuoPOQxFJUM7lAo8n--wjLXIhQtO-ku22ESJ1NdlYFuEo6/items/01ZOSRDAYUMWRSKRQE5ZDJGBUIVSUKVGEP/thumbnails/0/small/thumbnailContent",
+                "previewText": "RFP\r\n\r\n\r\nTable of Contents\r\nExecutive Summary\t3\r\nValorem Qualifications and References\t5\r\nCorporate Overview\t5\r\nCore business, mission and vision statements\t5\r\nThe Valorem Promise\t6\r\nOrganization and structure\t6\r\nLocations\t6\r\nNumber of employees and con",
+                "containerWebUrl": "https://cie493742.sharepoint.com/sites/m400rfp/Shared Documents/Forms/AllItems.aspx",
+                "containerDisplayName": "M400 RFP",
+                "containerType": "Site"
+            },
+            "resourceReference": {
+                "webUrl": "https://cie493742.sharepoint.com/sites/m400rfp/Shared%20Documents/RFP.docx?web=1",
+                "id": "drives/b!p1LzSjul2UOwo9o3KzkuoPOQxFJUM7lAo8n--wjLXIhQtO-ku22ESJ1NdlYFuEo6/items/01ZOSRDAYUMWRSKRQE5ZDJGBUIVSUKVGEP",
+                "type": "microsoft.graph.driveItem"
+            }
+        },
+        {
+            "id": "AadS80o7pdlDsKPaNys5LqDzkMRSVDO5QKPJ_vsIy1yIULTvpLtthEidTXZWBbhKOuCHDd5WDn9GhQloe2RZW_I-HrQCuYaJQqqy4ecc1gepAg",
+            "weight": 1.838224473889011,
+            "resourceVisualization": {
+                "title": "Contoso  M400",
+                "type": "PowerPoint",
+                "mediaType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                "previewImageUrl": "https://cie493742.sharepoint.com/_api/v2.0/drives/b!p1LzSjul2UOwo9o3KzkuoPOQxFJUM7lAo8n--wjLXIhQtO-ku22ESJ1NdlYFuEo6/items/01ZOSRDA7AQ4G54VQOP5DIKCLIPNSFSW7S/thumbnails/0/small/thumbnailContent",
+                "previewText": "Contoso \r\nM400\r\nYour phone.\r\nYour way.\r\n\r\nIntroducing the Contoso M400 Smartphone  \r\nThe Contoso M400 has been reinvented, just for you. \r\nIt includes innovative new features so you can personalize and customize your phone to fit your lifestyle. See what ",
+                "containerWebUrl": "https://cie493742.sharepoint.com/sites/m400rfp/Shared Documents/Forms/AllItems.aspx",
+                "containerDisplayName": "M400 RFP",
+                "containerType": "Site"
+            },
+            "resourceReference": {
+                "webUrl": "https://cie493742.sharepoint.com/sites/m400rfp/Shared%20Documents/Promotions.pptx?web=1",
+                "id": "drives/b!p1LzSjul2UOwo9o3KzkuoPOQxFJUM7lAo8n--wjLXIhQtO-ku22ESJ1NdlYFuEo6/items/01ZOSRDA7AQ4G54VQOP5DIKCLIPNSFSW7S",
+                "type": "microsoft.graph.driveItem"
+            }
+        }
+    ]
