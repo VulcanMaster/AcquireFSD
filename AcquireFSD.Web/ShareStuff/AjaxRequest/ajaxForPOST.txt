@@ -1,0 +1,55 @@
+﻿    static getRestCallOfPOST(url: string, requestContent: string, odataValue: string = "verbose") {
+        var d = Q.defer<string>();
+        debugger;
+        try {
+            $.ajax({
+                url: url,
+                method: "POST",
+                headers: {
+                    "Accept": "application/json;odata=" + odataValue,
+                    "X-RequestDigest": $("#__REQUESTDIGEST").val()
+                },
+                contentType: "application/json;odata=verbose",
+                data: requestContent,
+                success: function (data: any) {
+                    d.resolve(data);
+                },
+                error: function (error: any) {
+                    d.reject(error);
+                }
+            });
+        }
+        catch (error) {
+            d.reject(error);
+        }
+        return d.promise;
+    }
+
+
+
+ var  requestContent: string = JSON.stringify(
+            {
+                "request":
+                {
+                    "__metadata": { "type": "Microsoft.Office.Server.Search.REST.SearchRequest" },
+                    "Querytext": 'path="https://tenant.com/Shared%20Documents/Document.docx"',
+                    "TrimDuplicates": "false",
+                    "ProcessBestBets": "false",
+                    "BypassResultTypes": "true",
+                    "ProcessPersonalFavorites": "false",
+                    "RowLimit": "10",
+                    "SelectProperties": {
+                        "results": [
+                            "Title",
+                            "Path",
+                            "Author"
+                        ]
+                    }
+                }
+            }
+        );
+
+	var odataValue = "nometadata"
+	var tenantUrl = "https://tenant.com"
+
+	getRestCallOfPOST(tenantUrl, requestContent, odataValue)
